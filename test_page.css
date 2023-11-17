@@ -1,0 +1,342 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: content-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+section{
+    padding: 2rem 7%;
+}
+
+body {
+    background-color: #eee;
+}
+.navbar {
+    padding: 2rem 7%;
+    /* border: 22px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    box-shadow: 0 .5rem 1.5rem rgba(220, 20, 60, .1);
+    background-color: #ffffff;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 2rem;
+    font-weight: 600;
+    color: crimson;
+    position: relative;
+}
+
+/* .navbar .list ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar .list ul li{
+    list-style: none;
+
+} */
+.navbar .list a {
+    margin: 0 1rem;
+    font-size: 1.7rem;
+    color: crimson;
+    /* font-weight: 500; */
+    position: relative;
+}
+
+.navbar .list a:before {
+    content: "";;
+    position: absolute;
+    bottom: -5px;
+    /* width: 60%; */
+    height: 2px;    
+    width: 0;
+    border-radius: 50px;
+    background: crimson;
+    transition:0.5s ;
+}
+.navbar .list a:hover:before{
+    width: 80%;
+    /* font-size: 1.8rem; */
+    /* transition: 0.7s; */
+}
+.navbar .icon div{
+    /* border: 1px solid red; */
+    height: 3.5rem;
+    width: 3.5rem;
+    line-height: 3.5rem;
+    background-color: #eeeeee;
+    font-size: 1.8rem;
+    color: black; 
+    border-radius: 5px;
+    /* margin-right: 0.1rem; */
+    text-align: center;
+}
+.navbar .icon div:hover{
+    background-color: crimson;
+    color: white;
+}
+#bar-style{
+    display: none;
+}
+.navbar .list.active{
+    right: 2rem;
+    transition: 0.4s linear;
+}
+#btn{
+    position: relative;
+    display: inline-flex;
+    padding: 1.1rem 2.3rem;
+    background-color: transparent;
+    color: black;
+    text-decoration: none;
+    letter-spacing: 1px;
+    border: none;
+    outline: none;
+    font-size: 1.7rem;
+    margin-left: 1rem;
+    overflow: hidden;
+    font-weight: 600;
+    background-color: #eeeeee;
+}
+#btn span{
+    position: relative;
+    z-index: 1;
+}
+#btn::before{
+    content: '';
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%,-50%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: crimson;
+    transition: width 0.5s, height 0.5s;
+}
+#btn:hover::before{
+    width: 100px;
+    height:100px;
+    /* color: white; */
+}
+.navbar .search_box{
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    color: crimson;
+    /* border: 1px solid crimson; */
+    height: 4rem;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    width: 25vw;
+}
+.navbar .search_box.active{
+    right: 2rem;
+    transition: 0.4s linear;
+}
+.navbar .search_box input{
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    padding: 0 2rem;
+    color: crimson;
+    /* border: 1px solid; */
+}
+.navbar .search_box label{
+    font-size: 1.7rem;
+    cursor: pointer;
+    padding-right: 1.5rem;
+}
+.test_page_heading{
+    padding: 1rem 7%;
+    margin: 7.5rem 0 0 0;
+    background-color: #f38a8a;
+    display: flex;
+    /* position: fixed;   */
+}
+.test_page_heading h1{
+    font-size: 6rem;
+    font-weight: 700;
+    color: crimson;
+ }
+ .text_cont{
+    padding: 2rem 10%;
+    text-decoration: none;
+    max-width: 60%;
+    margin: 2rem 0;  
+ }
+.text_cont ul{
+    list-style: none;
+}
+.text_cont ul li {
+    font-size: 2.1rem;
+    line-height: 3rem;
+    
+}
+.text_cont ul li p{
+    margin: 2rem 0;
+}
+.text_cont ul li .label_que{
+    /* border: 1px solid red; */
+    color: #222;
+    line-height: 1rem;
+    /* margin: 2rem; */
+    
+}
+.text_cont ul li .optins_st ul{
+    display: flex;
+}
+.text_cont ul li .optins_st ul li{
+    margin: 3rem 2rem;
+}
+.radio{
+    display: none;
+}
+.label_yn{
+    padding: 1.2rem 3.3rem;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    font-size: 1.7rem;
+    font-weight: 600;
+    position: relative;
+    display: inline-flex;
+    letter-spacing: 1px;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    
+}
+.label_yn span{
+    z-index: 1;
+    position: relative;
+}
+.label_yn::before{
+    content: '';
+    position: absolute;
+    top: var(--x1);
+    left: var(--y1);
+    transform: translate(-50%,-50%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: crimson;
+    transition: width 0.5s, height 0.5s;
+}
+.label_yn:hover::before{
+    width: 100px;
+    height:100px;
+}
+
+
+#choise_1:checked ~ .label_1,
+#choise_2:checked ~ .label_2
+{
+    background-color: transparent;
+}
+
+#choise_2:checked ~ .label_2_1,
+#choise_2:checked ~ .label_2_2
+{
+    background-color: transparent;
+}
+.select_bar{
+    border: none;
+    display: inline-flex;
+    padding: 1.5rem 4rem;
+    font-size: 1.8rem;   
+    font-weight: 600;
+    position: relative;
+    outline: none;
+    overflow: none;
+    letter-spacing: 1px;
+}
+/* .select_optiion{
+    padding-right: 2rem;
+} */
+
+
+@media (max-width: 1080px)
+{
+    html{
+        font-size: 55%;
+    }
+    .navbar{
+        padding: 2rem;
+    }
+    .text_cont{
+        max-width: 80%;
+    }
+}
+@media (max-width: 970px){
+    html{
+        font-size: 45%;
+    }
+    .navbar .search_box{
+        width: 40vw;
+    }
+    selection{
+        padding: 2rem 7%;
+    }
+    .text_cont{
+        max-width: 100%;
+    }
+    
+}
+@media(max-width: 700px){
+    /* html{
+        font-size: 40%;
+    } */
+    .navbar .list{
+        position: absolute;
+        top: 110%;
+        right: -110%;
+        width: 25rem;
+        border-radius: 0.5rem;
+        background-color: #ffffff;
+    } 
+    #bar-style{
+        display: inline-block;
+    }
+    .navbar .list a{
+        font-size: 2rem;
+        margin: 2rem 2.5rem;
+        display: block;
+    }
+    .navbar .search_box{
+        width: 50vw;
+    }
+
+}
+
+::-webkit-scrollbar{
+    width: 12px;
+}
+::-webkit-scrollbar-thumb
+{
+    border-radius: 6px;
+    background: linear-gradient(transparent,#DC143C); 
+}
